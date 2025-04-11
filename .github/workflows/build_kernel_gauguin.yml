@@ -253,10 +253,10 @@ jobs:
             echo "CONFIG_KSU_SUSFS_OPEN_REDIRECT=y" >> ./arch/arm64/configs/${{ env.DEFCONFIG_NAME }}
           fi
           if [[ "${{ env.LXC_ENABLE }}" == "true" ]]; then
-           echo "CONFIG_VIRTUALIZATION=y" >> android-kernel/arch/arm64/configs/vendor/gauguin_user_defconfig
-           echo "CONFIG_KVM=y" >> android-kernel/arch/arm64/configs/vendor/gauguin_user_defconfig
-           echo "CONFIG_VHOST_NET=y" >> android-kernel/arch/arm64/configs/vendor/gauguin_user_defconfig
-           echo "CONFIG_VHOST_CROSS_ENDIAN_LEGACY=y" >> android-kernel/arch/arm64/configs/vendor/gauguin_user_defconfig
+           echo "CONFIG_VIRTUALIZATION=y" >> arch/arm64/configs/vendor/gauguin_user_defconfig
+           echo "CONFIG_KVM=y" >> arch/arm64/configs/vendor/gauguin_user_defconfig
+           echo "CONFIG_VHOST_NET=y" >> arch/arm64/configs/vendor/gauguin_user_defconfig
+           echo "CONFIG_VHOST_CROSS_ENDIAN_LEGACY=y" >> arch/arm64/configs/vendor/gauguin_user_defconfig
           fi
 
       - name: Set Pack Method and KernelSU and SUSFS
